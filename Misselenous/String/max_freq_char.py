@@ -13,4 +13,13 @@ for char in test_str:
 # finding the character with maximum frequency
 max_char = max(freq, key = freq.get)
 
+all_char = set(list(test_str))
 print(max_char)
+
+max_freq = 0
+for char in all_char:
+    if test_str.count(char)>max_freq:
+        max_freq = test_str.count(char)
+        max_ch = char
+
+print(max_ch, max_freq)

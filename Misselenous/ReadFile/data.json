@@ -1,0 +1,9 @@
+{
+    "name": "Karan",
+    "languages": ["English", "French"],
+    "Fruits": {
+        "fruit": "Apple",
+        "size": "Large",
+        "color": "Red"
+     }
+ }
