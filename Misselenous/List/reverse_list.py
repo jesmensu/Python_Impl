@@ -25,3 +25,14 @@ lst_rev = []
 for i in lst:
     lst_rev.insert(0,i)
 print(lst_rev)
+
+# --------------------------------------------
+lst = [1,1,3,4,5,1]
+first = 0
+last = len(lst)-1
+while first<last:
+    if(lst[first]!= lst[last]):
+        lst[first], lst[last] = lst[last], lst[first]
+    first += 1
+    last -= 1
+print(lst)

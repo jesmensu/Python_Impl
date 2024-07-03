@@ -1,7 +1,7 @@
 lst = [78,2,3,74,74,1,6,89,56,34,89]
 
-min_lst = lst[0]
-max_lst = lst[0]
+min_lst = float("inf")
+max_lst = float("-inf")
 for i in lst:
     if i<min_lst:
         min_lst = i
@@ -11,10 +11,10 @@ for i in lst:
 print(min_lst, max_lst, max_lst-min_lst)
 
 # Second maximum
-sec_max_lst = lst[0]
-max_lst = lst[0]
+sec_max_lst = float("-inf")
+max_lst = float("-inf")
 for i in lst:
-    if max_lst == i:
+    if i == max_lst:
         continue
     if i>max_lst:
         sec_max_lst = max_lst
@@ -45,6 +45,8 @@ for n in range(num):
 
 print(list_elmt)
 
+
+# ===========================================
 final_list = []
 
 for i in range(0, 2):
@@ -58,3 +60,21 @@ for i in range(0, 2):
     final_list.append(max1)
 
 print(final_list)
+
+
+lst = [78,2,3,74,74,1,6,89,56,34,89]
+# Second maximum
+max_lst = float("-inf")
+for i in lst:
+    if i == max_lst:
+        continue
+    if i>max_lst:
+        max_lst = i
+sec_max_lst = float("-inf")
+for i in lst:
+    if i == max_lst:
+        continue
+    if i>sec_max_lst:
+        sec_max_lst = i
+
+print(sec_max_lst, max_lst)
