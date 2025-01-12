@@ -5,7 +5,7 @@ def count_digit(num):
         count += 1
     return count
 
-count = 0
+count = 10
 while(count):
     num_inp = int(input())
     digit = count_digit(num_inp)

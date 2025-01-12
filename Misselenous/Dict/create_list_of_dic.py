@@ -17,18 +17,29 @@ for key, value in test_dict.items():
 
 print(new_list)
 
+# Another approach
+new_dic = []
+for key, value in test_dict.items():
+    for i in range(len(value)):
+        if len(new_dic) == i:
+            dic = {}
+            new_dic.append(dic)
+            new_dic[i][key] = value[i]
+        else:
+            new_dic[i][key] = value[i]
+print(new_dic)
+
 # convert list of dict to dict of list value
 list = [{"name": "Nandini", "age": 20},
        {"name": "Manjeet", "age": 20},
        {"name": "Nikhil", "age": 19}]
 
 new_dict = {}
-for l in list:
-    if not new_dict:
-        for k,v in l.items():
-            new_dict[k] = [v]
-    else:
-        for k,v in l.items():
-            new_dict[k].append(v)
+for dic in new_list:
+    for key, value in dic.items():
+        if key in new_dict:
+            new_dict[key].append(value)
+        else:
+            new_dict[key] = [value]
 
 print(new_dict)

@@ -1,3 +1,5 @@
+# 2 is a prime number and 1 and less than 1 is not prime.
+
 num = int(input())
 
 is_prime = True

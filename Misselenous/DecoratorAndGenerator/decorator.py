@@ -25,19 +25,24 @@ division(4,2)
 
 
 
+def make_square(func):
+    def inner(a,b):
+        x = func(a,b)
+        sq = x*x
+        return sq
+    return inner
 
-
-def add_event(func):
+def add_even(func):
     def inner(a,b):
         if a%2 == 1 or b%2 == 1:
-            return "We are only adding even values"
+            return 0
         else:
             return func(a,b)
     return inner
-
-@add_event
+@make_square
+@add_even
 def add(a,b):
     return a+b
 
-print(add(3,2))
+print(add(2,2))
 
